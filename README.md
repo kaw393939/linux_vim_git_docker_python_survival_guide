@@ -1,116 +1,83 @@
-# Brand Archetypes, Design Styles, and Persuasion
-## A Collaborative Survival Guide
+[Download README.md](sandbox:/mnt/data/README.md)
 
-Build a practical reference for understanding brand archetypes, applying Robert Cialdini’s principles of persuasion, and recognizing design styles within modernism and postmodernism.
+# Linux, Vim, Git, Docker, and Python Survival Guide
 
-This is also an exercise in **Git collaboration**: organizing work with issues, assigning ownership, working on branches, reviewing changes, and merging without overwriting each other’s work.
+Build a practical, beginner-friendly reference for everyday development tasks. This is also an exercise in **Git collaboration**: planning with issues, assigning ownership, working on branches, reviewing contributions, and avoiding merge conflicts.
 
 ## 1. Form Your Team
 
-Form a group of **four**. Choose a **project lead** and assign one topic to each member. The lead also owns a topic.
+Choose one **project lead** and assign an owner to each topic. Everyone—including the lead—contributes content. Members may own more than one topic.
 
-| Topic | Required Pages | Owner |
-|---|---:|---|
-| [Brand Archetypes](archetypes/README.md) | 12 archetypes | TBD |
-| [Principles of Persuasion](persuasion/README.md) | 7 principles | TBD |
-| [Modernist Design](modernism/README.md) | 6 styles | TBD |
-| [Postmodernist Design](postmodernism/README.md) | 6 styles | TBD |
+| Topic  | Suggested Coverage                                                                      | Owner |
+| ------ | --------------------------------------------------------------------------------------- | ----- |
+| Linux  | Navigation, files, permissions, pipes, processes, and help                              | TBD   |
+| Vim    | Modes, navigation, editing, searching, saving, and quitting                             | TBD   |
+| Git    | Staging, commits, branches, merging, remotes, undoing changes, and GitHub collaboration | TBD   |
+| Docker | Images, containers, Dockerfiles, ports, volumes, and Compose                            | TBD   |
+| Python | Running scripts, virtual environments, pip, dependencies, modules, and pytest           | TBD   |
 
-**The project lead:**
-- Creates the shared repository, invites teammates as collaborators, and ensures everyone can clone it.
-- Coordinates issue assignments and file ownership.
-- Maintains this root README, including member links.
-- Ensures pull requests receive review and merges approved work.
+### Project Lead Responsibilities
 
-The lead coordinates the project; **they do not do everyone’s work**. Each member maintains their topic folder and its `README.md` index.
+The lead creates the team repository, invites collaborators, establishes the folder structure, and coordinates assignments and merges. Use `main` as the default branch.
 
-## 2. Assignment One: Discover Your Archetype
+**Only the lead creates or edits common files:** the root `README.md`, root `.gitignore`, shared templates, and repository-wide configuration or workflows. Request changes to these files through an issue assigned to the lead.
 
-Each member creates an issue for their personal page, assigns it to themselves, and completes the work on a branch.
+Topic owners maintain their own folders, including their topic’s `README.md` and images. The lead maintains the team roster and links in the root README.
 
-Ask an AI assistant to help identify your brand archetype. Ask follow-up questions rather than accepting its first answer.
-
-Create `members/first_last.md` containing:
-- Your name and chosen archetype.
-- Why the AI suggested it and whether you agree.
-- Suggested imagery, colors, fonts, and sample phrasing.
-- Examples of applying Cialdini’s persuasion principles to your personal brand, with explanations.
-
-The project lead adds each member’s name, archetype, and page link below.
-
-### Team Members
-
-<!-- Example: - [Keith Williams](members/keith_williams.md) — Explorer -->
-
-## 3. Assignment Two: Create a Sample Page
-
-Each member creates **one complete sample page** for their assigned topic—for example, Explorer, Unity, or a selected design style.
-
-Have it ready for the next class. Review the samples together and agree on a reusable format **before producing the remaining pages**.
-
-Every topic page should include:
-- **What it is:** A clear definition and essential characteristics.
-- **When to use it:** The audience, purpose, and situations it suits.
-- **How to apply it:** Practical guidance for imagery, color, typography, layout, or wording, as relevant.
-- **Examples:** Relevant images and real-world examples with explanations.
-- **Sources:** Links to primary sources and image credits.
-- **Navigation:** A link back to the topic index.
-
-Design-style pages should also explain historical context and how the style supports, develops, or challenges modernist ideas.
-
-## 4. Assignment Three: Complete the Guide
-
-Use the approved format to finish the required pages in the topic table. Agree on the six styles in each design category before writing.
-
-Each member creates issues for their remaining pages and updates their topic index with links.
-
-**AI is a collaborator, not a source of truth.** Verify claims, check sources, and edit the output into a useful guide you understand.
-
-## 5. Collaboration Workflow: Issue → Branch → Pull Request
-
-### Plan the work
-
-Create an issue **before editing**. Include:
-- A specific title, such as `Add Explorer archetype guide`.
-- One assigned owner.
-- The exact files being created or changed.
-- A checklist defining when the task is complete.
-
-The project lead checks for overlapping assignments. Discuss ownership in the issue before starting.
-
-### Create a branch
-
-Start from an updated `main`. Replace the example issue number and branch name with your own.
-
-```bash
-git switch main
-git pull --ff-only
-git switch -c issue-12-explorer
+```text
+README.md           # Lead
+.gitignore          # Lead
+templates/          # Lead
+linux/              # Linux owner
+vim/                # Vim owner
+git/                # Git owner
+docker/             # Docker owner
+python/             # Python owner
 ```
 
-### Commit and push
+## 2. Build the Guide
 
-Stage only the files belonging to your issue. Reference the issue number in your commit message.
+**First: create one sample page per topic.** Review the samples together and agree on a format before expanding the guide. The lead records the approved template.
 
-```bash
-git status
-git add archetypes/explorer.md
-git commit -m "Add Explorer archetype guide #12"
-git push -u origin issue-12-explorer
-```
+Each page should include:
 
-### Request review
+* **Purpose:** What the command or concept does and when to use it.
+* **Examples:** Copyable commands, prerequisites, and expected results.
+* **Troubleshooting:** Common mistakes, fixes, and warnings for destructive commands.
+* **References:** Official documentation and a link back to the topic index.
 
-Open a pull request into `main`. Explain what changed and include `Closes #12` in its description.
+**Then: complete the topic.** Use separate pages for related tasks rather than one enormous file. Create an issue for each page or small improvement.
 
-Another teammate reviews the content, sources, formatting, and links. Address feedback on the same branch. The project lead merges approved work.
+AI assistance is allowed, but **run the examples, verify the explanations, and understand what you submit**. Use disposable practice files or containers when testing destructive commands. Never commit passwords, tokens, or private keys.
 
-## 6. Don’t Step on Each Other’s Toes
+## 3. Issue → Branch → Pull Request
 
-- **Never push directly to `main`.** Use your own branch and a pull request.
-- **Respect file ownership.** Only the lead edits the root README; topic owners edit their assigned folders.
-- **Coordinate shared changes in an issue.** Do not edit someone else’s files without agreement.
-- **Avoid overlapping work.** Merge an existing task before starting another that changes the same files.
-- **Do not force-push or overwrite a teammate’s work to fix a conflict.** Resolve it together.
+Use a shared repository with individual branches for the initial exercise.
 
-**Done means:** the page meets its checklist, its sources and links work, another teammate has reviewed it, and the pull request has been merged.
+1. **Create an issue before editing.** Include a clear goal, one assignee, the exact files involved, and a completion checklist. Check existing issues to avoid duplicate work.
+2. **Start from updated `main`.** Create a task branch such as `issue-12-linux-navigation`. Do not do assignment work directly on `main`.
+3. **Make focused commits.** Stage only your task’s files and reference the issue: `git commit -m "Add Linux navigation guide #12"`.
+4. **Push and open a pull request into `main`.** Describe the change and include `Closes #12`. With default auto-closing enabled, merging into the default branch closes the linked issue. ([GitHub Docs][1])
+5. **Review before merging.** Another member checks the instructions, examples, and links. The lead merges approved work; another member must also review the lead’s contributions. Pull requests provide the place to discuss and review those changes. ([GitHub Docs][2])
+
+## 4. Avoid Stepping on Each Other’s Work
+
+* **One owner per task; separate files for parallel work.** Coordinate overlapping changes in the issue before editing.
+* **Keep shared files with the lead.** Do not rename another member’s files or reorganize the repository without agreement.
+* **Keep branches short-lived.** Submit small pull requests and update from `main` before starting the next task.
+* **Inspect your changes before committing.** Avoid unrelated formatting changes. Resolve conflicts with the affected teammate; never force-push shared branches to bypass a problem.
+
+## 5. Optional: Fork-Based Collaboration
+
+For additional practice, agree as a group to use forks. Each member forks the team repository, clones their own fork, works on task branches, and opens pull requests **back to the team repository**. ([GitHub Docs][3])
+
+Keep issues in the team repository. In fork commits, use a full issue reference such as `TEAM_OWNER/REPOSITORY#12`. Keep your fork and local clone updated from the team repository before starting new tasks. ([GitHub Docs][1])
+
+**Forks do not eliminate merge conflicts.** File ownership and communication still apply. Where supported, the lead should protect `main` by requiring pull requests and at least one approval. ([GitHub Docs][4])
+
+**Done means:** accurate content, tested examples, working links, completed issue checklist, peer review, and a merged pull request.
+
+[1]: https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue?utm_source=chatgpt.com "Linking a pull request to an issue"
+[2]: https://docs.github.com/articles/using-pull-requests?utm_source=chatgpt.com "Pull requests"
+[3]: https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project?utm_source=chatgpt.com "Contributing to a project"
+[4]: https://docs.github.com/articles/syncing-a-fork?utm_source=chatgpt.com "Syncing a fork"
