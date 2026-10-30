@@ -1,5 +1,3 @@
-[Download README.md](sandbox:/mnt/data/README.md)
-
 # Linux, Vim, Git, Docker, and Python Survival Guide
 
 Build a practical, beginner-friendly reference for everyday development tasks. This is also an exercise in **Git collaboration**: planning with issues, assigning ownership, working on branches, reviewing contributions, and avoiding merge conflicts.
@@ -80,4 +78,4 @@ Keep issues in the team repository. In fork commits, use a full issue reference 
 [1]: https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue?utm_source=chatgpt.com "Linking a pull request to an issue"
 [2]: https://docs.github.com/articles/using-pull-requests?utm_source=chatgpt.com "Pull requests"
 [3]: https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project?utm_source=chatgpt.com "Contributing to a project"
-[4]: https://docs.github.com/articles/syncing-a-fork?utm_source=chatgpt.com "Syncing a fork"
+[4]: https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches#require-pull-request-reviews-before-merging "Require pull request reviews before merging"
